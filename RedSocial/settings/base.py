@@ -21,7 +21,10 @@ BASE_APPS = [
 ]
 
 MY_APPS = [
-
+    'apps.career',
+    'apps.courses',
+    'apps.professor',
+    'apps.users',
 ]
 
 THIRD_APPS = [
