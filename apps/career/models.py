@@ -1,11 +1,10 @@
 from django.db import models
 
-class Career(models.Model):
-    carrer_id = models.IntegerField(primary_key=True)
+class Career(models.Model): 
     carrer_name = models.CharField(max_length=100)
     carrer_description = models.CharField(max_length=500)
     carrer_years = models.IntegerField()
-#    carrer_idCourses = models.ManyToManyField(to = 'courses.Course', related_name ='MTM_courses', default=1)
+    carrer_idCourses = models.ManyToManyField(to = 'courses.Course', related_name ='MTM_courses', default=1)
     carrer_idProfessor = models.ManyToManyField(to ='professor.Professor', related_name ='MTM_professor')
     carrer_idSupervisor = models.ForeignKey(to = 'professor.Professor', related_name ='MTM_Supervisor', on_delete=models.RESTRICT)
     carrer_programYear = models.IntegerField()

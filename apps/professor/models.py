@@ -1,7 +1,6 @@
 from django.db import models
 
 class Professor(models.Model):
-    professor_id = models.IntegerField(primary_key=True)
     professor_name = models.CharField(max_length=20)
     professor_lastName = models.CharField(max_length=20)
     professor_idCourses = models.ManyToManyField(to = 'courses.Course', default=1)
