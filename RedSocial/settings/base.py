@@ -28,7 +28,7 @@ MY_APPS = [
 ]
 
 THIRD_APPS = [
-
+    'rest_framework',
 ]
 
 INSTALLED_APPS = BASE_APPS + MY_APPS + THIRD_APPS
