@@ -3,10 +3,10 @@ from django.db import models
 class Professor(models.Model):
     professor_name = models.CharField(max_length=20)
     professor_lastName = models.CharField(max_length=20)
-    professor_idCourses = models.ManyToManyField(to = 'courses.Course')
+    professor_idCourses = models.ManyToManyField(to = 'courses.Course', blank=True)
     professor_rank = models.FloatField()
     professor_isSupervisor = models.BooleanField()
-    professor_idCareer = models.ManyToManyField(to = 'career.Career')
+    professor_idCareer = models.ManyToManyField(to = 'career.Career', blank=True)
     professor_isActive = models.BooleanField(default=True)
 
     class Meta:
